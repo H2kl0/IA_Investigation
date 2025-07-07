@@ -386,8 +386,8 @@ a:focus {
 }
 
 .work_section .work_container .box {
-  width: 275px;
-  height: 275px;
+  width: 300px;
+  height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
