@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<title>Información general</title>
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<!-- AOS.js (animaciones al hacer scroll) -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<!-- Inter Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f0f4f8;
+    color: #333;
+    scroll-behavior: smooth;
+  }
+  header {
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    position: fixed; width: 100%; top: 0; z-index: 999;
+  }
+  .navbar-brand { font-weight:700; color:#056213;}
+  .nav-link { font-weight:500; color:#000000 !important; transition: color .3s; }
+  .nav-link:hover { color:#044b18 !important; }
+  section { padding: 6rem 0; }
+  #hero { background: linear-gradient(135deg, #E0F1FF, #FFFFFF); text-align:center; padding-top:8rem; }
+  #hero h1 { font-size:3rem; font-weight:700; margin-bottom:1rem; }
+  #hero p { font-size:1.25rem; margin-bottom:2rem; color:#555; }
+  .btn-primary-custom {
+    background:#044409; color:#fff;
+    padding:.8rem 2rem;
+    border:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:transform .3s, box-shadow .3s;
+  }
+  .btn-primary-custom:hover {
+    transform:translateY(-4px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+  }
+  .card-prof {
+    border:none;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(34, 159, 13, 0.08);
+    transition:transform .4s;
+  }
+  .card-prof:hover {
+    transform:translateY(-10px);
+  }
+  .card-prof img {
+    object-fit:cover;
+    transition: transform .4s;
+  }
+  .card-prof:hover img {
+    transform:scale(1.05);
+  }
+  .section-title {
+    font-size:2rem; font-weight:600;
+    position:relative; display:inline-block;
+    margin-bottom:2rem;
+  }
+  .section-title::after {
+    content:""; width:80px; height:4px;
+    background:#00ff04; position:absolute; left:0; bottom:-10px;
+    border-radius:2px;
+  }
+  footer {
+    background:#02551a; color:#bbb; padding:2rem 0;
+  }
+  footer a { color:#bbb; text-decoration:none; transition:color .3s;}
+  footer a:hover { color:#fff; }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#hero">Informacion general</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#hero">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#metodologia">Metodología</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resultados">Resultados</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="#creadores">Creadores</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section id="hero">
+  <div class="container" data-aos="fade-down">
+    <h1>¿Cómo ha ayudado la inteligencia artificial  a que personas sin conocimientos de programación creen sus propias aplicaciones, en un contexto donde la demanda de herramientas digitales crece constantemente?</h1>
+  </div>
+</section>
+
+<!-- Metodología -->
+<section id="metodologia">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Casos de Estudio Destacados</h2>
+    <div class="row g-4">
+          <div>
+          <h5><strong>GitHub Copilot: Líder del Mercado</strong></h5>
+          <li><strong>Duolingo:</strong> 25% de aumento en la velocidad de desarrollo.</li>
+          <li><strong>Estadísticas globales:</strong>  1.2 millones de desarrolladores codifican 55% más rápido.</li>
+          <li><strong>Penetración:</strong> 46% del código actual usa IA (61% en Java).</li>
+          <li><strong>Precios</strong> €10/mes individual, €19/mes empresarial.</li>
+          </div>
+      </div>
+
+      <br><br>
+
+      <h2 class="section-title" data-aos="fade-up"> Hallazgos Principales</h2>
+    <div class="row g-4">
+          <div>
+            <h5><strong>1.Democratización Confirmada</strong></h5>
+            <p>La IA permite que personas sin conocimientos técnicos puedan crear software funcional.</p>
+             <h5><strong>2.Complementariedad, No Reemplazo</strong></h5>
+            <p>La IA potencia capacidades humanas, no las reemplaza.</p>
+             <h5><strong>3.Eficiencia Comprobada</strong></h5>
+            <p>Incrementos documentados de entre 25% y 55% en velocidad de desarrollo, sin pérdida de calidad.</p>
+             <h5><strong>4.Limitaciones Reconocidas</strong></h5>
+            <p>
+            <li>Requiere supervisión humana</li>
+            <li>Más efectiva en tareas rutinarias</li>
+            <li>Los proyectos complejos siguen necesitando expertos</li>
+          </p>
+          </div>
+      </div>
+
+      <br><br>
+
+      <h2 class="section-title" data-aos="fade-up"> Impacto Social y Económico</h2>
+    <div class="row g-4">
+          <div>
+            <h5><strong>Oportunidad creadas</strong></h5>
+            <li><strong>Emprendedores:</strong> Pueden concretar ideas sin depender de grandes equipos técnicos.</li>
+            <li><strong>Pequeñas empresas:</strong> Mayor capacidad para competir con grandes corporaciones.</li>
+            <li><strong>Profesionales:</strong> Integran soluciones digitales en sus respectivas áreas.</li>
+            <br>
+            <h5><strong>Transformacion del rol del programador</strong></h5>
+            <li>De codificadores a arquitectos de soluciones.</li>
+            <li>Supervisores de calidad del código generado por IA.</li>
+            <li>Integradores de tecnologías diversas.</li>
+            <li>Innovadores en soluciones creativas.</li>
+          </div>
+      </div>
+
+      <br><br>
+
+      <h2 class="section-title" data-aos="fade-up">Recomendaciones Estratégicas</h2>
+    <div class="row g-4">
+          <div>
+          <h5><strong>Para Programadores Actuales</strong></h5>
+            <li>Integrar herramientas de IA al flujo de trabajo.</li>
+            <li>Desarrollar habilidades complementarias como arquitectura de software y diseño.</li>
+            <li>Adoptar una mentalidad colaborativa con la IA.</li>
+            <br>
+            <h5><strong>Para Nuevos Desarrolladores</strong></h5>
+            <li>Optar por un aprendizaje híbrido: fundamentos + herramientas con IA..</li>
+            <li>Enfocarse en lógica y resolución de problemas.</li>
+            <li>Especializarse en áreas donde el humano sigue siendo indispensable.</li>
+            <br>
+            <h5><strong>Para Organizaciones</strong></h5>
+            <li>Invertir en capacitación técnica y digital para los equipos.</li>
+            <li>Fomentar una cultura de innovación y experimentación.</li>
+            <li>Reconocer el valor único del pensamiento humano.</li>
+          </div>
+      </div>
+
+      <br><br>
+
+      <h2 class="section-title" data-aos="fade-up">Conclusion final</h2>
+    <div class="row g-4">
+          <div>
+              La inteligencia artificial no está reemplazando a los programadores: está democratizando el desarrollo de software.
+              Actúa como multiplicador de capacidades humanas, abriendo una nueva era de colaboración entre humanos y máquinas.
+              Este cambio reduce la barrera de entrada al desarrollo digital, ampliando la participación, acelerando la innovación y generando oportunidades laborales.
+              <p><strong>El futuro no es de reemplazo, sino de complementariedad y acceso universal al desarrollo tecnológico.</strong></p>
+          </div>
+      </div>
+      
+</section>
+<footer>
+  <div class="container" data-aos="fade-up">
+    <p>&copy; 2025 Investigación IA • Sena clem - Tulua Grupo 2921881</p>
+  </div>
+</footer>
+
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true });
+  document.querySelectorAll('.open-modal').forEach(el => {
+    el.addEventListener('click', () => {
+      new bootstrap.Modal(document.querySelector(el.dataset.bsTarget)).show();
+    });
+  });
+</script>
+
+</body>
+</html>
