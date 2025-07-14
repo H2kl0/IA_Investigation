@@ -1,540 +1,242 @@
 <!DOCTYPE html>
-
-
+<html lang="es">
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<title>IA Pro - Investigación Profesional</title>
 
-  <title>IA Proyecto</title>
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<!-- AOS.js (animaciones al hacer scroll) -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<!-- Inter Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
-
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f0f4f8;
+    color: #333;
+    scroll-behavior: smooth;
+  }
+  header {
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    position: fixed; width: 100%; top: 0; z-index: 999;
+  }
+  .navbar-brand { font-weight:700; color:#007BFF;}
+  .nav-link { font-weight:500; color:#666 !important; transition: color .3s; }
+  .nav-link:hover { color:#007BFF !important; }
+  section { padding: 6rem 0; }
+  #hero { background: linear-gradient(135deg, #E0F1FF, #FFFFFF); text-align:center; padding-top:8rem; }
+  #hero h1 { font-size:3rem; font-weight:700; margin-bottom:1rem; }
+  #hero p { font-size:1.25rem; margin-bottom:2rem; color:#555; }
+  .btn-primary-custom {
+    background:#007BFF; color:#fff;
+    padding:.8rem 2rem;
+    border:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:transform .3s, box-shadow .3s;
+  }
+  .btn-primary-custom:hover {
+    transform:translateY(-4px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+  }
+  .card-prof {
+    border:none;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:transform .4s;
+  }
+  .card-prof:hover {
+    transform:translateY(-10px);
+  }
+  .card-prof img {
+    object-fit:cover;
+    transition: transform .4s;
+  }
+  .card-prof:hover img {
+    transform:scale(1.05);
+  }
+  .section-title {
+    font-size:2rem; font-weight:600;
+    position:relative; display:inline-block;
+    margin-bottom:2rem;
+  }
+  .section-title::after {
+    content:""; width:80px; height:4px;
+    background:#00ff04; position:absolute; left:0; bottom:-10px;
+    border-radius:2px;
+  }
+  footer {
+    background:#23272B; color:#bbb; padding:2rem 0;
+  }
+  footer a { color:#bbb; text-decoration:none; transition:color .3s;}
+  footer a:hover { color:#fff; }
+</style>
 </head>
-
 <body>
 
-  <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
-            <span>
-              Investigacion de IA
-            </span>
-          </a>
-          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
-              <ul class="navbar-nav  ">
-              </ul>
-            </div>
-          </div>
-          <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
-            <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-          </form>
-        </nav>
+<!-- Navbar -->
+<header>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#hero">Investigación IA</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#hero">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#metodologia">Metodología</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resultados">Resultados</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="#creadores">Creadores</a></li>
+        </ul>
       </div>
-    </header>
-    
-    <!-- end header section -->
-        <section class="work_section layout_padding">
-          <h1 class=" ">
-            La inteligencia artificial en la creación de Programas y Aplicaciones: una Oportunidad: para Personas sin Conocimiento Profundos de Programacion
-          </h1>
-          
-      </section>
-    
-        
-        <!-- about section -->
-    <section class="about_section layout_padding">
-      <div class="container">
-        <div class="custom_heading-container">
-          <h3 class=" ">
-            Situación Problema:
-          </h3>
-        </div>
-        <p class="layout_padding2-top">
-        <br> alguna vez se ha preguntado
-        ¿De qué manera la inteligencia artificial con su eficiencia, accesibilidad y calidad en la creacion
-        de programas y aplicaciones, puede ayudar especialmente a personas sin conocimientos profundos de programación?
-        </p>
-      </div>
-    </section>
-    <!-- end about section -->
-        <section class="custom_heading-container">
-          <h5 class=" ">
-            La inteligencia artificial  juega un papel importante en la actualidad
-            ya que puede ayudar a personas sin conocimientos profundos de programacion a crear programas y
-            aplicaciones de alta calidad
-            de manera eficiente y accesible
-          </h5>
-      </section>
-    <!-- slider section -->
-    <section class=" slider_section position-relative">
-      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="slider_item-box layout_padding2">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="img-box">
-                      <div>
-                        <img src="images/slider-img.jpg" alt="" class="" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="detail-box">
-                      <div>
-                        <h1>
-                          Estudio del potencial de <br>
-                          la <span>IA</span><br>
-
-                        </h1>
-                        <p>
-                          Analizamos como la IA puede ayudar a personas sin profundos conomientos en la creacion
-                          de programas y aplicaciones de alta calidad
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item ">
-            <div class="slider_item-box layout_padding2">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="img-box">
-                      <div>
-                        <img src="images/slider-img.jpg" alt="" class="" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="detail-box">
-                      <div>
-                        <h1>
-                          Evaluacion de la <span>Eficiencia</span> <br>
-                          y <span>accesibilidad</span> <br>
-
-                        </h1>
-                        <p>
-                          Examinamos la eficiencia de las herramientas IA para programas y como pueden ser utilizadas por personas sin experiencia
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item ">
-            <div class="slider_item-box layout_padding3">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="img-box">
-                      <div>
-                        <img src="images/slider-img.jpg" alt="" class="" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="detail-box">
-                      <div>
-                        <h1>
-                          <br>
-                          Analizar la <span>calidad</span> de las soluciones
-                          <br>
-                        </h1>
-                        <p>
-                          Evaluar la calidad de las soluciones creadas con la IA y compararlas con programadores experimientados
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <div class="container">
-        <div class="slider_nav-box">
-          <div class="btn-box">
-            <a href="">
-              Ver más
-            </a>
-            <hr>
-          </div>
-          <div class="custom_carousel-control">
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- end slider section -->
+    </nav>
   </div>
-  <div class="bg">
+</header>
 
+<!-- Hero -->
+<section id="hero">
+  <div class="container" data-aos="fade-down">
+    <h1>La IA en la Creación de Programas y Aplicaciones</h1>
+    <p>Una oportunidad para personas sin conocimientos profundos en programación.</p>
+    <button class="btn-primary-custom">Comenzar</button>
+  </div>
+</section>
 
-
-    <!-- service section -->
-
-    <section class="service_section layout_padding-bottom">
-      <div class="container">
-        <div class="custom_heading-container">
-          <h3 class=" ">
-            La metodología 
-          </h3>
-        </div>
-        <p class="">
-          Nuestro equipo opto por los siguientes pasos
-        </p>
-        <div class="service_container ">
-          <div class="row">
-            <div class="col-md-3">
-              <div class="box b-1">
-                <div class="img-box">
-                  <img src="images/reunion.png" alt="">
-                </div>
-                <div class="detail-box">
-                  <h6>
-                    Recolección de informacion
-                  </h6>
-                  <p>
-                    Se hizo una revisión exhaustiva sobre la IA como herramienta para creación de  
-                    programas y aplicaciones
-                  </p>
-                  <div class="btn-box">
-                    <a href="info.html">
-                      Leer mas
-                    </a>
-                    <hr>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="box b-2">
-                <div class="img-box">
-                  <img src="images/recopilacion-de-datos.png" alt="">
-                </div>
-                <div class="detail-box">
-                  <h6>
-                    Encuesta 
-                  </h6>
-                  <p>
-                    Se realizo encuestas a diferentes tipo de personas para reatroalimentar
-                    si usarian la IA como herramienta para crear programas
-                  </p>
-                  <div class="btn-box">
-                    <a href="resultado.html">
-                      Leer Resultados
-                    </a>
-                    <hr>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="box b-3">
-                <div class="img-box">
-                  <img src="images/encuesta.png" alt="">
-                </div>
-                <div class="detail-box">
-                  <h6>
-                    Investigacion de casos
-                  </h6>
-                  <p>
-                    Se extrajo y analizo diferentes casos de empresas y organizaciones que han usado
-                    la IA  y que consecuencias ha traido esto
-                  </p>
-                  <div class="btn-box">
-                    <a href="info.html">
-                      Leer mas
-                    </a>
-                    <hr>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="box b-4">
-                <div class="img-box">
-                  <img src="images/prueba.png" alt="">
-                </div>
-                <div class="detail-box">
-                  <h6>
-                    Experimentacion
-                  </h6>
-                  <p>
-                    Se ha tomado # personas sin conocimientos de programación y se le han dado ciertas instrucciones
-                    para crear un aplicación
-                  </p>
-                  <div class="btn-box">
-                    <a href="info.html">
-                      leer mas
-                    </a>
-                    <hr>
-                  </div>
-                </div>
-              </div>
-            </div>
+<!-- Metodología -->
+<section id="metodologia">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Metodología</h2>
+    <div class="row g-4">
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="card-prof">
+          <img src="images/reunion.png" class="w-100" style="height:220px" alt="Recolección">
+          <div class="p-3">
+            <h5>Recolección de Información</h5>
+            <p>Revisión exhaustiva de herramientas IA.</p>
+            <button class="btn btn-link p-0 text-primary open-modal" data-bs-target="#m1">Leer más</button>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- end service section -->
-
-    <!-- work section -->
-
-    <section class="work_section layout_padding">
-      <div class="container">
-        <div class="custom_heading-container">
-          <h3 class=" ">
-            Resultados
-          </h3>
-        </div>
-      </div>
-      <div class="work_container ">
-        <div class="box b-1">
-          <div class="img-box">
-            <img src="images/computadora.png" alt="">
-          </div>
-          <div class="name">
-            <h6>
-            Identificación de herramientas efectivas
-            </h6>
-          </div>
-        </div>
-        <div class="box b-2">
-          <div class="img-box ">
-            <img src="images/eficiencia.png" alt="">
-          </div>
-          <div class="name">
-            <h6>
-              Mejora de la accesibilidad y la eficiencia
-            </h6>
-          </div>
-        </div>
-        <div class="box b-3">
-          <div class="img-box ">
-            <img src="images/servicio-de-calidad.png" alt="">
-          </div>
-          <div class="name">
-            <h6>
-             Calidad de las soluciones
-            </h6>
-          </div>
-        </div>
-        <div class="box b-4">
-          <div class="img-box ">
-            <img src="images/almacenamiento-ilimitado.png" alt="">
-          </div>
-          <div class="name">
-            <h6>
-              Beneficios y limitaciones
-            </h6>
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="card-prof">
+          <img src="images/identificacion.png" class="w-100" style="height:220px" alt="Identificación">
+          <div class="p-3">
+            <h5>Identificación de Herramientas</h5>
+            <p>Selección de herramientas promissorias.</p>
+            <button class="btn btn-link p-0 text-primary open-modal" data-bs-target="#m2">Leer más</button>
           </div>
         </div>
       </div>
-      <div class="container">
-      </div>
-    </section>
-
-
-    <!-- end work section -->
-
-    <!-- contact section -->
-
-    <section class="contact_section layout_padding">
-      <div class="custom_heading-container">
-        <h3 class=" ">
-          Dejanos saber tu opinión
-        </h3>
-      </div>
-      <div class="container layout_padding2-top">
-        <div class="row">
-          <div class="col-md-6 mx-auto">
-            <form action="">
-              <div>
-                <input type="text" placeholder="NOMBRE">
-              </div>
-              <div>
-                <input type="email" placeholder="EMAIL">
-              </div>
-              <div>
-                <input type="text" class="message-box" placeholder="MENSAJE">
-              </div>
-              <div class="d-flex justify-content-center ">
-                <button>
-                  ENVIAR
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- end contact section -->
-
-    <section class="client_section layout_padding-bottom">
-      <div class="container">
-        <div class="custom_heading-container">
-          <h3 class=" ">
-            Creadores
-          </h3>
-        </div>
-        <div class="layout_padding2-top">
-          <div class="client_container">
-            <div class="client_id">
-              <div class="img-box">
-                <img src="images/logo-developer.png" alt="">
-              </div>
-              <div class="name">
-                <h5>
-                  Tatiana Carvajal 
-                </h5>
-                <h6>
-                  Developer
-                </h6>
-              </div>
-            </div>
-             <div class="client_id">
-              <div class="img-box">
-                <img src="images/logo-developer.png" alt="">
-              </div>
-              <div class="name">
-                <h5>
-                  Fernando Velasquez 
-                </h5>
-                <h6>
-                  Developer
-                </h6>
-              </div>
-            </div>
-             <div class="client_id">
-              <div class="img-box">
-                <img src="images/logo-developer.png" alt="">
-              </div>
-              <div class="name">
-                <h5>
-                  Sebastian Rojas
-                </h5>
-                <h6>
-                  Developer
-                </h6>
-              </div>
-            </div>
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="card-prof">
+          <img src="images/test.png" class="w-100" style="height:220px" alt="Pruebas">
+          <div class="p-3">
+            <h5>Pruebas y Evaluación</h5>
+            <p>Evaluación de eficiencia y accesibilidad.</p>
+            <button class="btn btn-link p-0 text-primary open-modal" data-bs-target="#m3">Leer más</button>
           </div>
         </div>
       </div>
-    </section>
-    <!-- info section -->
-    <section class="info_section layout_padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3">
-
-          </div>
-          <div class="col-md-3">
-          </div>
-          <div class="col-md-3">
-            <div class="info-contact">
-              <h4>
-                Informacion de contacto
-              </h4>
-              <div class="location">
-                <h6>
-                  Dirección:
-                </h6>
-                <a href="">
-                  <img src="images/location.png" alt="">
-                  <span>
-                    Sena-Clem, Tulua 
-                  </span>
-                </a>
-              </div>
-              <div class="call">
-                <h6>
-                  Servicio al cliente:
-                </h6>
-
-             
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-              <div class="social-box">
-                <a href="">
-                  <img src="images/facebook.png" alt="">
-                </a>
-                <a href="">
-                  <img src="images/twitter.png" alt="">
-                </a>
-                <a href="">
-                  <img src="images/google-plus.png" alt="">
-                </a>
-                <a href="">
-                  <img src="images/linkedin.png" alt="">
-                </a>
-              </div>
-            </div>
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+        <div class="card-prof">
+          <img src="images/informe.png" class="w-100" style="height:220px" alt="Informe">
+          <div class="p-3">
+            <h5>Informe Final</h5>
+            <p>Análisis y recomendaciones.</p>
+            <button class="btn btn-link p-0 text-primary open-modal" data-bs-target="#m4">Leer más</button>
           </div>
         </div>
-    
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- Resultados -->
+<section id="resultados" class="bg-white">
+  <div class="container" data-aos="fade-up">
+    <h2 class="section-title">Resultados</h2>
+    <p class="mb-4">La IA reduce la barrera técnica y permite crear software funcional con alta calidad y eficiencia.</p>
+    <button class="btn-primary-custom open-modal" data-bs-target="#m5">Ver resultados completos</button>
+  </div>
+</section>
 
+<!-- Contacto -->
+<section id="contacto">
+  <div class="container" data-aos="fade-up">
+    <h2 class="section-title">Contacto</h2>
+    <form class="row g-3">
+      <div class="col-md-6"><input class="form-control" placeholder="Nombre" required></div>
+      <div class="col-md-6"><input type="email" class="form-control" placeholder="Correo" required></div>
+      <div class="col-12"><textarea class="form-control" rows="4" placeholder="Mensaje" required></textarea></div>
+      <div class="col-12 text-center"><button type="submit" class="btn-primary-custom">Enviar mensaje</button></div>
+    </form>
+  </div>
+</section>
 
-    <!-- end info_section -->
+<!-- Creadores -->
+<section id="creadores" class="bg-white">
+  <div class="container" data-aos="fade-up">
+    <h2 class="section-title">Creadores</h2>
+    <div class="row g-4 justify-content-center text-center">
+      <div class="col-md-3" data-aos="zoom-in">
+        <img src="images/team-1.jpg" class="rounded-circle mb-2" style="width:120px" alt="Creador 1">
+        <h5>Fernando Velasquez </h5><p>Desarrollador de software</p>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+        <img src="images/team-2.jpg" class="rounded-circle mb-2" style="width:120px" alt="Creador 2">
+        <h5>Sebastian Rojas</h5><p>Desarrollador de software</p>
+      </div>
+      <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+        <img src="images/team-3.jpg" class="rounded-circle mb-2" style="width:120px" alt="Creador 3">
+        <h5>Tatiana Carvajal</h5><p>Desarrollador de software</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- footer section -->
-    <section class="container-fluid footer_section">
-    <p>
-      &copy; 
-      <a href="https://sena-clem.blogspot.com/">Sena Clem - Ficha: 2921881 </a>
-    </p>
-  </section>
-    <!-- footer section -->
+<footer>
+  <div class="container" data-aos="fade-up">
+    <p>&copy; 2025 Investigación IA • Sena clem - Tulua Grupo 2921881</p>
+  </div>
+</footer>
 
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
+<!-- Modales -->
+<div class="modal fade" id="m1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+  <div class="modal-header"><h5>Recolección de Información</h5><button class="btn-close" data-bs-dismiss="modal"></button></div>
+  <div class="modal-body">Búsqueda en fuentes académicas para recopilar herramientas IA recientes...</div></div></div></div>
+<div class="modal fade" id="m2"><div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+  <div class="modal-header"><h5>Identificación de Herramientas</h5><button class="btn-close" data-bs-dismiss="modal"></button></div>
+  <div class="modal-body">Selección de herramientas intuitivas y con buen soporte comunitario...</div></div></div></div>
+<div class="modal fade" id="m3"><div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+  <div class="modal-header"><h5>Pruebas y Evaluación</h5><button class="btn-close" data-bs-dismiss="modal"></button></div>
+  <div class="modal-body">Evaluación práctica con usuarios sin experiencia en programación...</div></div></div></div>
+<div class="modal fade" id="m4"><div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+  <div class="modal-header"><h5>Informe Final</h5><button class="btn-close" data-bs-dismiss="modal"></button></div>
+  <div class="modal-body">Análisis comparativo, ventajas, limitaciones y recomendaciones...</div></div></div></div>
+<div class="modal fade" id="m5"><div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+  <div class="modal-header"><h5>Resultados Completos</h5><button class="btn-close" data-bs-dismiss="modal"></button></div>
+  <div class="modal-body">HALLAZGOS: la IA reduce la barrera técnica y permite crear software funcional con alta calidad...</div></div></div></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true });
+  document.querySelectorAll('.open-modal').forEach(el => {
+    el.addEventListener('click', () => {
+      new bootstrap.Modal(document.querySelector(el.dataset.bsTarget)).show();
+    });
+  });
+</script>
+
+</body>
+</html>
