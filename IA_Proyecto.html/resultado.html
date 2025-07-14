@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<title>IA Pro - Investigación Profesional</title>
+<title>Resultados IA - Investigación Profesional</title>
 
 <!-- Bootstrap 5 -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -29,28 +29,14 @@
   .navbar-brand { font-weight:700; color:#056213;}
   .nav-link { font-weight:500; color:#000000 !important; transition: color .3s; }
   .nav-link:hover { color:#044b18 !important; }
-  section { padding: 6rem 0; }
-  #hero { background: linear-gradient(135deg, #E0F1FF, #FFFFFF); text-align:center; padding-top:8rem; }
-  #hero h1 { font-size:3rem; font-weight:700; margin-bottom:1rem; }
-  #hero p { font-size:1.25rem; margin-bottom:2rem; color:#555; }
-  .btn-primary-custom {
-    background:#044409; color:#fff;
-    padding:.8rem 2rem;
-    border:none;
-    border-radius:50px;
-    font-weight:600;
-    transition:transform .3s, box-shadow .3s;
-  }
-  .btn-primary-custom:hover {
-    transform:translateY(-4px);
-    box-shadow:0 10px 20px rgba(0,0,0,0.1);
-  }
+  section { padding: 6rem 0 3rem 0; } /* Añadí padding bottom para no cortar contenido */
   .card-prof {
     border:none;
     border-radius:12px;
     overflow:hidden;
     box-shadow:0 10px 25px rgba(34, 159, 13, 0.08);
     transition:transform .4s;
+    cursor: default;
   }
   .card-prof:hover {
     transform:translateY(-10px);
@@ -77,6 +63,19 @@
   }
   footer a { color:#bbb; text-decoration:none; transition:color .3s;}
   footer a:hover { color:#fff; }
+
+  /* Botones de resultado */
+  .btn-link.open-result {
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  .btn-link.open-result.text-success {
+    color: #056213;
+  }
+  .btn-link.open-result.text-success:hover {
+    color: #044b18;
+    text-decoration: underline;
+  }
 </style>
 </head>
 <body>
@@ -91,114 +90,78 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navMenu">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#hero">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#metodologia">Metodología</a></li>
+          <li class="nav-item"><a class="nav-link active" href="resultado.html#resultados">Resultados</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contacto">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#creadores">Creadores</a></li>
         </ul>
       </div>
     </nav>
   </div>
 </header>
-
-<!-- Hero -->
-<section id="hero">
-  <div class="container" data-aos="fade-down">
-    <h1>Resultados de la encuesta dada al publico</h1>
-    <p>Una oportunidad para conocer mejor sus preferencias.</p>
-
-  </div>
-</section>
-
-<!-- Metodología -->
-<section id="metodologia">
-  <div class="container">
-    <h2 class="section-title" data-aos="fade-up">Preguntas</h2>
-    <div class="row g-4">
-      <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
-        <div class="card-prof">
-    
-          <div class="p-3">
-            <p>¿Una inteligencia artificial puede ayudar a hacer programas o aplicaciones?.</p>
-            <button href="*" class="btn btn-link p-0 text-primary open-modal">Ver resultado</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-        <div class="card-prof">
-          <div class="p-3">
-            <p>¿Se puede usar una IA sin saber mucho de programación(como código)?.</p>
-            <button  href="*" class="btn btn-link p-0 text-primary open-modal" >Ver resultado</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
-        <div class="card-prof">
-          <div class="p-3">
-            <p>¿Una IA puede encontrar fallas o errores en un programa(codigos, comandos, instrucciones)?.</p>
-            <button href="*" class="btn btn-link p-0 text-primary open-modal" >Ver resultado</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
-        <div class="card-prof">
-          <div class="p-3">
-            <h5></h5>
-            <p>¿Una IA puede aprender de trabajos anteriores de programación(codigos dados, instrucciones) para hacerlo mejor después?.</p>
-            <button href="*" class="btn btn-link p-0 text-primary open-modal" >Ver resultado</button>
-          </div>
-        </div>
-      </div>
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
-        <div class="card-prof">
-          <div class="p-3">
-            <h5></h5>
-            <p>¿Una IA puede tomar decisiones sola mientras se hace un programa(mientras desarrolla código o comandos)?.</p>
-            <button href="*" class="btn btn-link p-0 text-primary open-modal" >Ver resultado</button>
-          </div>
-        </div>
-           <div class="card-prof">
-          <div class="p-3">
-            <p>¿La IA puede llegar a reemplazar a las personas que hacen programas(o sea a los desarrolladores de software)?..</p>
-            <button href="*" class="btn btn-link p-0 text-primary open-modal">Ver resultado</button>
-          </div>
-        </div>
-          
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Resultados -->
 <section id="resultados" class="bg-white">
-  <div class="container" data-aos="fade-up">
-    <h2 class="section-title">Resultados</h2>
-    <p class="mb-4">La IA reduce la barrera técnica y permite crear software funcional con alta calidad y eficiencia.</p>
-  </div>
-  <div class = "resultados">
-  <div class="p-3">
-  <img src="images/resultado1.png" class="w-10" style="height:400px" alt="Recolección">
-    <img src="images/resultado2.png" class="w-10" style="height:400px" alt="Recolección">
-    <img src="images/resultado3.png" class="w-10" style="height:400px" alt="Recolección">
-    <img src="images/resultado4.png" class="w-10" style="height:400px" alt="Recolección">
-    <img src="images/resultado5.png" class="w-10" style="height:400px" alt="Recolección">
-    <img src="images/resultado6.png" class="w-10" style="height:400px" alt="Recolección">
-    <img src="images/resultado7.png" class="w-10" style="height:400px" alt="Recolección">
-    <img src="images/resultado8.png" class="w-10" style="height:400px" alt="Recolección">
+  <div class="container" data-aos="fade-up" style="padding-top: 5rem;">
+    <h2 class="section-title">Preguntas</h2>
+    <div class="row g-4">
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card-prof p-3">
+          <p>¿Una inteligencia artificial puede ayudar a hacer programas o aplicaciones?</p>
+          <button class="btn btn-link open-result text-success" data-result="images/resultado1.png">Ver resultado</button>
+        </div>
+      </div>
+     
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card-prof p-3">
+          <p>¿Se puede usar una IA sin saber mucho de programación?</p>
+          <button class="btn btn-link open-result text-success" data-result="images/resultado2.png">Ver resultado</button>
+        </div>
+      </div>
+     
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="card-prof p-3">
+          <p>¿Una IA puede encontrar fallas o errores en un programa?</p>
+          <button class="btn btn-link open-result text-success" data-result="images/resultado3.png">Ver resultado</button>
+        </div>
+      </div>
+      
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="card-prof p-3">
+          <p>¿Una IA puede aprender de trabajos anteriores?</p>
+          <button class="btn btn-link open-result text-success" data-result="images/resultado4.png">Ver resultado</button>
+        </div>
+      </div>
+  
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+        <div class="card-prof p-3">
+          <p>¿Una IA puede tomar decisiones sola mientras se programa?</p>
+          <button class="btn btn-link open-result text-success" data-result="images/resultado5.png">Ver resultado</button>
+        </div>
+      </div>
+    
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+        <div class="card-prof p-3">
+          <p>¿La IA puede reemplazar a los desarrolladores de software?</p>
+          <button class="btn btn-link open-result text-success" data-result="images/resultado8.png">Ver resultado</button>
+        </div>
+      </div>
     </div>
-
   </div>
 </section>
-
-<!-- Contacto -->
-<section id="contacto">
-  <div class="container" data-aos="fade-up">
-    <h2 class="section-title">Contacto</h2>
-    <form class="row g-3">
-      <div class="col-md-6"><input class="form-control" placeholder="Nombre" required></div>
-      <div class="col-md-6"><input type="email" class="form-control" placeholder="Correo" required></div>
-      <div class="col-12"><textarea class="form-control" rows="4" placeholder="Mensaje" required></textarea></div>
-      <div class="col-12 text-center"><button type="submit" class="btn-primary-custom">Enviar mensaje</button></div>
-    </form>
+<div class="modal fade" id="modalResultado" tabindex="-1" aria-labelledby="modalResultadoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalResultadoLabel">Resultado</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img id="modalImagen" src="" alt="Resultado" class="img-fluid rounded" style="max-height: 70vh;" />
+      </div>
+    </div>
   </div>
-</section>
+</div>
 
 <!-- Creadores -->
 <section id="creadores" class="bg-white">
@@ -222,36 +185,28 @@
 </section>
 
 <footer>
-  <div class="container" data-aos="fade-up">
-    <p>&copy; 2025 Investigación IA • Sena clem - Tulua Grupo 2921881</p>
+  <div class="container text-center">
+    <p>&copy; 2025 Investigación IA • Grupo 2921881 • 
+      <a href="https://sena-clem.blogspot.com/" target="_blank" rel="noopener noreferrer">Sena clem - Tuluá</a>
+    </p>
   </div>
 </footer>
 
-<!-- Modales -->
-<div class="modal fade" id="m1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content">
-  <div class="modal-header"><h5>Recolección de Información</h5><button class="btn-close" data-bs-dismiss="modal"></button></div>
-  <div class="modal-body">Búsqueda en fuentes académicas para recopilar herramientas IA recientes...</div></div></div></div>
-<div class="modal fade" id="m2"><div class="modal-dialog modal-dialog-centered"><div class="modal-content">
-  <div class="modal-header"><h5>Identificación de Herramientas</h5><button class="btn-close" data-bs-dismiss="modal"></button></div>
-  <div class="modal-body">Selección de herramientas intuitivas y con buen soporte comunitario...</div></div></div></div>
-<div class="modal fade" id="m3"><div class="modal-dialog modal-dialog-centered"><div class="modal-content">
-  <div class="modal-header"><h5>Pruebas y Evaluación</h5><button class="btn-close" data-bs-dismiss="modal"></button></div>
-  <div class="modal-body">Evaluación práctica con usuarios sin experiencia en programación...</div></div></div></div>
-<div class="modal fade" id="m4"><div class="modal-dialog modal-dialog-centered"><div class="modal-content">
-  <div class="modal-header"><h5>Informe Final</h5><button class="btn-close" data-bs-dismiss="modal"></button></div>
-  <div class="modal-body">Análisis comparativo, ventajas, limitaciones y recomendaciones...</div></div></div></div>
-<div class="modal fade" id="m5"><div class="modal-dialog modal-dialog-centered"><div class="modal-content">
-  <div class="modal-header"><h5>Resultados Completos</h5><button class="btn-close" data-bs-dismiss="modal"></button></div>
-  <div class="modal-body">HALLAZGOS: la IA reduce la barrera técnica y permite crear software funcional con alta calidad...</div></div></div></div>
-
-<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init({ duration: 800, once: true });
-  document.querySelectorAll('.open-modal').forEach(el => {
-    el.addEventListener('click', () => {
-      new bootstrap.Modal(document.querySelector(el.dataset.bsTarget)).show();
+
+  document.querySelectorAll('.open-result').forEach(button => {
+    button.addEventListener('click', () => {
+      const imageSrc = button.getAttribute('data-result');
+      if(!imageSrc) return; 
+
+      const modalImagen = document.getElementById('modalImagen');
+      modalImagen.src = imageSrc;
+
+      const modal = new bootstrap.Modal(document.getElementById('modalResultado'));
+      modal.show();
     });
   });
 </script>
